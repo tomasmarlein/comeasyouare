@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Come As You Are</title>
+
+    <!--  Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/mhh1kcz.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/4baa8ea5d9.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#FFDE00">
+
+
+</head>
+<body id="top">
+    <!--  navigatie  -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="img/logo/caya_black_full_trans.png" alt="" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font-anton" href="#top">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-anton" href="#artiesten">Artiesten</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-anton" href="#tickets">Tickets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-anton" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link font-anton" href="#sponsors">Sponsors</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <a href="https://eventicks.be/shop/come-as-you-are-2023" class="btn btn-caya">Tickets</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header style="height: 800px;" class="position-relative">
+        <style>
+            #back-video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                object-fit: cover;
+                z-index: -1;
+            }
+        </style>
+
+        <video id="back-video" muted autoplay loop playsinline="" webkit-playsinline data-wf-ignore="true" data-object-fit="cover" preload="none">
+            <source src="video/header_video.mp4" type="video/mp4" data-wf-ignore="true">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <script>
+            Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+                get: function () {
+                    return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+                }});
+
+            const videoElement = document.getElementById('back-video');
+            videoElement.addEventListener('suspend', () => {
+                // suspend invoked
+                // show play button
+            });
+
+            videoElement.addEventListener('play', () => {
+                // video is played
+                // remove play button UI
+            });
+
+            $('body').on('click touchstart', function () {
+                const videoElement = document.getElementById('back-video');
+                if (videoElement.playing) {
+                    // video is already playing so do nothing
+                }
+                else {
+                    // video is not playing
+                    // so play video now
+                    videoElement.play();
+                }
+            });
+
+            // (function($){
+            //     $('#back-video').attr('playsinline','');
+            // })(jQuery);
+
+            // $(document).ready(function() {
+            //     $('#back-video').attr('playsinline','');
+            //     $('#back-video').play();
+            // });
+        </script>
+
+        <div class="header-content">
+            <img src="img/logo/caya_black_full_trans.png" alt="logo">
+            <h2 class="datum">16 september 2023</h2>
+            <a href="#" class="btn btn-caya">Tickets</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container mb-5" id="artiesten">
+            <div class="row mt-5 pt-5">
+                <div class="col-12 mb-5">
+                    <h2>Artiesten</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <!-- DJ 1 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="dj-card">
+                        <img src="img/dj/dj_venni.jpg" alt="">
+                        <div class="dj-card-content">
+                            <h3>DJ Venni</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DJ 2 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="dj-card">
+                        <img src="img/dj/qbix.jpg" alt="">
+                        <div class="dj-card-content">
+                            <h3>Q-Bix</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DJ 3 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="dj-card">
+                        <img src="img/covers/41811595_307318216490709_708045695415746560_n.jpg" alt="">
+                        <div class="dj-card-content">
+                            <h3>TBA</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DJ 4 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="dj-card">
+                        <img src="img/covers/41811595_307318216490709_708045695415746560_n.jpg" alt="">
+                        <div class="dj-card-content">
+                            <h3>TBA</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DJ 5 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="dj-card">
+                        <img src="img/covers/41811595_307318216490709_708045695415746560_n.jpg" alt="">
+                        <div class="dj-card-content">
+                            <h3>TBA</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-caya">
+        <div class="container mt-5 mb-5 pt-5 pb-5" id="tickets">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2>TICKETS</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="ticket-card text-center">
+                        <h4 class="mb-5">Voorverkoop</h4>
+                        <h2 class=""><span class="euro mr-2 text-muted">€</span>9</h2>
+                        <p class="text-muted mb-5" style="font-size: 8px;">Excl. fee</p>
+                        <a class="btn btn-caya" href="https://eventicks.be/shop/come-as-you-are-2023">Koop Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container mt-5 mb-5 pt-5 pb-5" id="faq">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2>FAQ</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Kan ik gewoon van en af het fuifterrein gaan met een inkomticket?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>
+                                        Neen: <br>
+                                        BINNEN = BINNEN en BUITEN = BUITEN
+                                    </strong> <br>
+                                    Wanneer je het terrein verlaat, krijg je geen toegang meer om het terrein te betreden.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Ik ben iets verloren op de fuif, wat kan ik nu doen?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    We verzamelen alle objecten die we vinden tijdens het opruimen en houden deze bij tot de eigenaar deze komt opeisen met een duidelijke beschrijving.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Is het mogelijk om bonnetjes met een bankkaart te kopen?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>JA,</strong> de kassa's zijn uitgerust met Bancontact.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Mag ik als -16 jarige het fuifterrein betreden?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Ja,</strong> je bent van harte welkom! Het is wel niet toegelaten om alcoholische dranken te kopen onder 16 jaar.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Is er vestiaire aanwezig?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Ja tijdens ons evenement is er de mogelijkheid om gebruik te maken van onze vestiaire. De prijs voor de vestiaire bedraagt €1.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Kun je tickets kopen aan de kassa?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Neen, dit jaar zullen er geen tickets verkocht worden aan de kassa. Tickets zullen dus enkel online te koop zijn.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Zijn er eetgelegenheden aanwezig?
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Ja, tijdens ons evenement zul je de mogelijkheid hebben om iets te eten aan de eetkraampjes op het terrein.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5 mb-5 pt-5 pb-5" id="sponsors">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2>Sponsors</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/eventicks.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/autocenter-meeuws.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/de-met.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/filter.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/gemeente-mol.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/GSV.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/GUIDO-Welkom.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/LeysenWouters_logo2.0.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/logo-leto.gif" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/logo_istanbul-doner-kebab.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/capelli.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/MCDONALDSMOL.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/MILO.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/miloheem.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/orakel.jpeg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/Oriental-Mol.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/patattenhuisje-achterbos-horizontaal.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/pleintje_header_logo.png" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/t-voske.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/unal.jpg" alt="sponsor">
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-4 mb-5 spon">
+                    <a href="" target="_blank">
+                        <img src="img/sponsors/Vleesboetiek-ezaart.PNG" alt="sponsor">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5 mb-5 pt-5 pb-5" id="locatie">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2>Locatie</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500.032241784076!2d5.082250877136124!3d51.20005757174523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1357bd73490c9%3A0x66154762090c50ce!2sZelm%2048%2C%202400%20Mol!5e0!3m2!1snl!2sbe!4v1685004889896!5m2!1snl!2sbe" width="100%" height="550px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+                    <h3 class="mb-4">Adres</h3>
+                    <p class="mb-5">
+                        Zelm 48<br>
+                        2400 Mol
+                    </p>
+
+                    <h3 class="mb-4">Mail</h3>
+                    <p class="email-link">
+                        <a href="mailto:comeasyouare@live.be">comeasyouare@live.be</a>
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+                    <h3 class="mb-4">Contact</h3>
+                    <p class="mb-5">
+                        <strong>Warre Hannes</strong><br>
+                        <a href="tel:0484701592">+32 484 70 15 92</a> <br><br>
+                        <strong>Tjorre Verstrael</strong><br>
+                        <a href="tel:0474062772">+32 474 06 27 72</a> <br><br>
+                        <strong>Sander Vennekens</strong><br>
+                        <a href="tel:0494252529">+32 494 25 25 29</a> <br><br>
+                        <strong>Berre Geboers</strong><br>
+                        <a href="tel:0476700886">+32 476 70 08 86</a>
+                    </p>
+
+                    <h3 class="mb-4">Social</h3>
+                    <p class="social-link">
+                        <a href="https://www.facebook.com/events/188750863330592" target="_blank"><i class="fa-brands fa-facebook-f mr-2"></i> Facebook</a>
+                        <br>
+                        <a href="https://www.instagram.com/comeasyouaremol/" target="_blank"><i class="fa-brands fa-instagram mr-2"></i> Instagram</a>
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center mb-5">
+                    <div class="flex-fill footer-logo">
+                        <img src="img/logo/caya_yellow.png" alt="logo" class="mb-4">
+                        <img src="img/logo/bierkaartjes.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <p class="text-center">
+                        © Copyright - Come As You Are 2021
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/wow.min.js"></script>
+<script>
+        $(document).ready(function () {
+            new WOW().init();
+        });
+    </script>
+
+<script>document.addEventListener("touchstart", function() {}, true);</script>
+
+    <script>
+        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").classList.add("navbar-bg");
+            } else {
+                document.getElementById("navbar").classList.remove("navbar-bg");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+:root {
+    --font-primary: 'Staatliches', sans-serif;
+    --font-secondary: 'Roboto', serif;
+    --font-text: 'PT Serif', serif;
+
+    --color-primary: #FFDE00;
+    --color-secondary: #151515;
+    --color-accent: #FEEE11;
+    --color-donker: #3D3F47;
+    --color-wit: #FFFFFF;
+    --color-zwart: #000000;
+    --color-grijs: #D3D3D3;
+
+    --bg-primary: #EAE9E7;
+}
+
+
+@font-face {
+    font-family: 'Impact Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Impact'), url('../fonts/impact.ttf') format('ttf');
+}
+
+
+body {
+    background: #F4F5F6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Anton', sans-serif !important;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.navbar-bg {
+    background: var(--color-zwart) !important;
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: var(--color-zwart) !important;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .form-inline {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item {
+        padding: 5px 0;
+    }
+}
+
+.bg-primary {
+    background: var(--bg-primary) !important;
+}
+
+.btn {
+    padding: 10px 30px !important;
+    transition: 0.5s all ease-in-out;
+    border-radius: 0;
+}
+
+.btn-caya {
+    font-family: 'Anton', sans-serif !important;
+    background: var(--color-primary) !important;
+    color: var(--color-zwart) !important;
+}
+
+.btn-caya:hover {
+    background: var(--color-donker) !important;
+    color: var(--color-wit) !important;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+    z-index: 99 !important;
+    gap: 2rem;
+}
+
+.header-content img {
+    width: 60%;
+}
+
+.header-content h2 {
+    font-family: 'Anton', sans-serif !important;
+    color: var(--color-primary) !important;
+    font-size: 3rem;
+}
+
+#artiesten {
+    position: relative;
+}
+
+#artiesten .dj-card {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+#artiesten .dj-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#artiesten .dj-card .dj-card-content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+}
+
+#artiesten .dj-card .dj-card-content h3 {
+   color: var(--color-primary);
+}
+
+.bg-caya {
+    background: var(--color-primary);
+}
+
+#tickets .ticket-card {
+    min-height: 280px;
+    /* filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4)); */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    background: #FFFFFF;
+}
+
+#tickets .ticket-card h2 {
+    font-size: 40px;
+}
+
+#tickets .ticket-card h2 .euro {
+    font-size: 20px;
+}
+
+#faq .accordion .accordion-item {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+#faq .accordion .accordion-item .accordion-header .accordion-button, #faq .accordion .accordion-item .accordion-body {
+    padding: 20px 40px;
+}
+
+#sponsor .spon {
+    width: 100%;
+    height: 250px;
+}
+
+#sponsors .spon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    transition: 0.3s all ease-in-out;
+    filter: grayscale(1);
+}
+
+#sponsors .spon img:hover {
+    filter: grayscale(0);
+}
+
+#locatie iframe {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+footer {
+    background: var(--color-primary);
+    padding: 70px 0 0;
+}
+
+footer h3 {
+    text-align: left;
+}
+
+footer .email-link a {
+    color: #000000;
+}
+
+footer .social-link a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .social-link a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
